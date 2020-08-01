@@ -501,7 +501,7 @@
 			<div class="col-md-4">
 				<div class="fh5co-blog animate-box">
 					<div class="blog-text">
-					<p>“Accidents often produce the best solutions…Only you can recognize 
+						<p>“Accidents often produce the best solutions…Only you can recognize 
 							the difference between an accident and your original intent.”</p>
 					<p>As a designer, it’s important to think beyond apps and websites.
 						 Even if you’re working primarily in the digital space, remember that you’re
@@ -542,7 +542,7 @@
 	</div>
 	<div class="choose animate-box">
 		<h2 id="contact">Contact</h2>
-		<form action="https://script.google.com/macros/s/AKfycbyMC21vYed48K8yFUy3r8L8jjha0y0q6w4QmRsbEaPvM1aJg8RL/exec" method="POST"   class="gform  bg-light p-5 contact-form">
+		<form onClick="refresh"  action="https://script.google.com/macros/s/AKfycbyMC21vYed48K8yFUy3r8L8jjha0y0q6w4QmRsbEaPvM1aJg8RL/exec" method="POST"   class="gform  bg-light p-5 contact-form">
 			<div class="row form-group">
 				<div class="col-md-6">
 					<input required type="text" id="fname" class="form-control" placeholder="Your Goodname" name="name">
@@ -559,9 +559,9 @@
 				</div>
 			</div>
 			<div class="form-group">
-				<input type="submit" value="Send Message" class="btn btn-primary">
+				<input type="submit" value="Send Message" class="btn btn-primary" onclick="myFunction()" onsubmit="reload">
 			</div>
-
+			<p id="demo"></p>
 		</form>	
 	</div>
 </div>
@@ -586,6 +586,17 @@
 <div class="gototop js-top">
 	<a href="#" class="js-gotop"><i class="icon-arrow-up22 "></i></a>
 </div>
+
+
+
+<script>
+	function myFunction() {
+	  document.getElementById("demo").innerHTML = "Your Submission is recieved";
+	  return true;
+
+	}
+	</script>
+
 
 <!-- jQuery -->
 <script src="js/jquery.min.js"></script>
